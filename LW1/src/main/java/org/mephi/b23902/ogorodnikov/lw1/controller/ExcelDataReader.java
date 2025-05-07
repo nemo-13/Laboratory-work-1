@@ -11,7 +11,7 @@ import java.util.Map;
 public class ExcelDataReader {
     public Map<String, List<List<Double>>> readAllSheets(File file) throws IOException {
         Map<String, List<List<Double>>> result = new LinkedHashMap<>();
-        Workbook workbook = WorkbookFactory.create(file);
+        Workbook workbook = WorkbookFactory.create(file, null, true);
 
         for (Sheet sheet : workbook) {
             List<List<Double>> samples = new ArrayList<>();
